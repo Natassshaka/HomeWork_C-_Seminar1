@@ -1,13 +1,159 @@
-﻿//HomeWork 2
-// /HomeWork 2.1. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-void ShowSecondNumber() {
-    int num = new Random().Next(100,1000);
-    int num1 =  num/100;
-    int num3 = num%10;
-    int num2 = (num - num1*100 - num3)/10;
-    Console.WriteLine(num + "->" + num2);
+﻿
+
+//HomeWork 3
+// /HomeWork 19: *Напишите программу, которая принимает на вход пятизначное 
+//число и проверяет, является ли оно палиндромом.
+
+int Polimdrom(int n) {
+int reverse = 0;
+while (n!=0){
+    reverse = reverse *10;
+    reverse = reverse + n %10;
+    n=n/10;
+    }
+return reverse;    
 }
-ShowSecondNumber();
+
+Console.WriteLine("Input number:");
+int num = Convert.ToInt32(Console.ReadLine());
+int result = Polimdrom(num);
+int l = num.ToString().Length;
+if (l!=5){
+    Console.WriteLine("Введите 5-ое число");
+}
+else if (num== result){
+     Console.WriteLine("Введенное число является палиндромом");
+}
+else {
+        Console.WriteLine("Введенное число НЕ является палиндромом");
+    }
+
+
+// /HomeWork 22: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// void Distance3d (int x1, int x2, int y1, int y2, int z1, int z2){
+//       double dist3 =Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1)); 
+//       Console.WriteLine("Расстояние между точками: " + dist3);
+// }
+// Console.WriteLine("Input coordinates of first dot:");
+// int Xa = Convert.ToInt32(Console.ReadLine());
+// int Ya = Convert.ToInt32(Console.ReadLine());
+// int Za = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinates of second dot:");
+// int Xb = Convert.ToInt32(Console.ReadLine());
+// int Yb = Convert.ToInt32(Console.ReadLine());
+// int Zb = Convert.ToInt32(Console.ReadLine());
+// Distance3d(Xa,Xb,Ya,Yb,Za,Zb);
+
+// // /HomeWork 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// void Nsqrt(int num){
+//     int count =1;
+//     Console.Write(num + " -> " );
+//     while(count<=num){
+//         Console.Write(count*count*count + " ");
+//         count++;
+//     }
+//     }
+
+// Console.WriteLine("Введите число");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Nsqrt(N);
+
+
+
+
+
+//Seminar 3
+//1. 
+// int QuarterFind (int X, int Y){
+//     if (X > 0 && Y > 0)
+//         return 1;
+//     else if (X > 0 && Y < 0)
+//         return 2;
+//     else if (X < 0 && Y < 0)
+//         return 3;
+//     else if (X < 0 && Y > 0)
+//         return 4;
+//     else 
+//         return 0;
+// }
+// Console.WriteLine("Введите коортидинату Х");
+// int Xcoord = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите коортидинату Y");
+// int Ycoord = Convert.ToInt32(Console.ReadLine());
+// int result = QuarterFind(Xcoord,Ycoord);
+// if (result == 0){
+//     Console.WriteLine("Точка на осях. Введите кооректные данные");
+// }
+// else {
+//     Console.WriteLine("Четверть " + result );
+// }
+
+//2.
+// void Coordinat(int c) {
+//     if (c==1){
+//         Console.WriteLine("x > 0; y > 0");
+//     }
+//     else if (c==2){
+//         Console.WriteLine("x < 0; y > 0");
+//     }
+//     else if (c==3){
+//         Console.WriteLine("x < 0; y < 0");
+//     }
+//     else if (c==4){
+//         Console.WriteLine("x > 0; y < 0");
+//     }
+//     else {
+//         Console.WriteLine("Проверьте номер четверти");
+//     }
+// }
+//  Console.WriteLine("Введите номер четверти:");
+//  int q = Convert.ToInt32(Console.ReadLine());
+//  Coordinat(q);
+
+ 
+ //3.
+// void Dist(int x1, int x2, int y1, int y2){
+//     double dist1 =Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)); 
+//    Console.WriteLine("Расстояние между двумя точками" + dist1);
+// }
+
+// Console.WriteLine("Input coordinates of first dot:");
+// int Xa = Convert.ToInt32(Console.ReadLine());
+// int Ya = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinates of second dot:");
+// int Xb = Convert.ToInt32(Console.ReadLine());
+// int Yb = Convert.ToInt32(Console.ReadLine());
+// Dist(Xa,Xb,Ya, Yb);
+
+//4.
+// void Nsqrt(int num){
+//     int count =1;
+//     Console.Write(num + " -> " );
+//     while(count<=num){
+//         Console.Write(count*count + " ");
+//         count++;
+//     }
+//     }
+
+// Console.WriteLine("Введите число");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Nsqrt(N);
+
+
+
+
+
+
+//HomeWork 2
+// /HomeWork 2.1. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// void ShowSecondNumber() {
+//     int num = new Random().Next(100,1000);
+//     int num1 =  num/100;
+//     int num3 = num%10;
+//     int num2 = (num - num1*100 - num3)/10;
+//     Console.WriteLine(num + "->" + num2);
+// }
+// ShowSecondNumber();
 
 
 ///HomeWork 2.2. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
