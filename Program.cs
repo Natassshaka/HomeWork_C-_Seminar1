@@ -1,32 +1,202 @@
-﻿
+﻿//HomeWork 4.
+
+//3.Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] array  = new int [size];
+    for(int i=0; i<size;i++){
+        array [i]=new Random().Next(min,max+1);
+    }
+    return array;
+}
+// int [] CreateArray(int size)
+// {
+//     int[] array  = new int [size];
+//     for(int i=0; i<size;i++){
+//         Console.Write("Input " + i + " element: ");
+//         array [i]=Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+void ShowArray(int[] array)
+{
+    for (int i=0; i<array.Length; i++)
+    Console.Write(array[i]+ " ");
+}
+
+Console.WriteLine();
+int[] myArray = CreateRandomArray(8,1,100);
+ShowArray(myArray);
+
+
+//2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// int Sum(int num)
+// {
+//     int result= (int)(num/Math.Pow(10,(int)Math.Log10(num)));
+//     for (int i = 1; i <= num; i++)
+//     {
+//         result=result+num%10;
+//         num = num /10;
+//     }
+//     return result;
+// }
+// Console.WriteLine("Input number");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Кол-во цифр:" + Sum(num));
+
+// int SumNum(int num)
+// {
+//     int result = 0;
+//     while (num>0){
+//         result = result + num%10;
+//         num = num / 10; 
+//     }
+//     return result;
+// }
+// Console.WriteLine("Input number");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Сумма цифр:" + SumNum(num));
+
+//1.Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 
+
+
+//Seminar 4
+
+// 1.
+// int Sum (int А){
+// int result = 0;
+// if (А >= 1){
+//     for(int i=1; i<=А; i++){
+//         result += i;
+//     }
+//     return result;
+// }
+// else return 0;
+// }
+
+// Console.WriteLine("Input number:");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Сумма чисел: " + Sum(num));
+
+//2. Программа, позволяет определить кол-во цифр число
+// int CountNum(int num)
+// {
+//     int count = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         num = num / 10;
+//         count++;
+//     }
+//     return count;
+// }
+// Console.WriteLine("Input number");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Кол-во цифр:" + CountNum(num));
+
+
+// int CountNum(int num)
+// {
+//     int count = 0;
+//     while (num>0){
+//         num = num / 10;
+//         count++;
+//     }
+//     return count;
+// }
+// Console.WriteLine("Input number");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Кол-во цифр:" + CountNum(num));
+
+// 3.   Найти произведение
+// int Mult(int num){
+//     int count = 1;
+//     if (num < 1) return 0;
+//     else {
+//         for (int i=1; i<=num; i++)
+//             count=count*i;
+//         }
+//         return count;
+// }
+
+// Console.WriteLine("Input number");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Mult:" + Mult(number));
+
+// void Mult(int num){
+//  int count =1;
+//     if (num < 1){
+//         Console.WriteLine(" Введено плохое число");
+//     } 
+//     else {
+//         for (int i=1; i<=num; i++)
+//             count*=i;
+//         }
+//         Console.WriteLine("Произведение " + count);
+//         ;
+// }
+// Console.WriteLine("Введите число");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Mult(N);
+
+//4.
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array  = new int [size];
+//     for(int i=0; i<size;i++){
+//         array [i]=new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+// int [] CreateArray(int size)
+// {
+//     int[] array  = new int [size];
+//     for(int i=0; i<size;i++){
+//         Console.Write("Input " + i + " element: ");
+//         array [i]=Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//     Console.Write(array[i]+ " ");
+// }
+
+// Console.WriteLine();
+
+// int[] myArray = CreateArray(8);
+// ShowArray(myArray);
 
 //HomeWork 3
 // /HomeWork 19: *Напишите программу, которая принимает на вход пятизначное 
-//число и проверяет, является ли оно палиндромом.
+//число и проверяет, является ли оно палиндромом.  
 
-int Polimdrom(int n) {
-int reverse = 0;
-while (n!=0){
-    reverse = reverse *10;
-    reverse = reverse + n %10;
-    n=n/10;
-    }
-return reverse;    
-}
+// int Polimdrom(int n) {
+// int reverse = 0;
+// while (n!=0){
+//     reverse = reverse *10;
+//     reverse = reverse + n %10;
+//     n=n/10;
+//     }
+// return reverse;    
+// }
 
-Console.WriteLine("Input number:");
-int num = Convert.ToInt32(Console.ReadLine());
-int result = Polimdrom(num);
-int l = num.ToString().Length;
-if (l!=5){
-    Console.WriteLine("Введите 5-ое число");
-}
-else if (num== result){
-     Console.WriteLine("Введенное число является палиндромом");
-}
-else {
-        Console.WriteLine("Введенное число НЕ является палиндромом");
-    }
+// Console.WriteLine("Input number:");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int result = Polimdrom(num);
+// int l = num.ToString().Length;
+// if (l!=5){
+//     Console.WriteLine("Введите 5-ое число");
+// }
+// else if (num== result){
+//      Console.WriteLine("Введенное число является палиндромом");
+// }
+// else {
+//         Console.WriteLine("Введенное число НЕ является палиндромом");
+//     }
 
 
 // /HomeWork 22: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
@@ -110,8 +280,8 @@ else {
 //  int q = Convert.ToInt32(Console.ReadLine());
 //  Coordinat(q);
 
- 
- //3.
+
+//3.
 // void Dist(int x1, int x2, int y1, int y2){
 //     double dist1 =Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)); 
 //    Console.WriteLine("Расстояние между двумя точками" + dist1);
@@ -297,7 +467,7 @@ Console.WriteLine("Result is "+ result);
 // else {
 //     Console.WriteLine("Incorrect number");
 // }
-   
+
 //HomeWork 1. Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.   
 // Console.WriteLine("Input first number ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
@@ -343,7 +513,7 @@ Console.WriteLine("Result is "+ result);
 // }
 // else {
 //     Console.WriteLine("nechetnoe");
-    //}
+//}
 
 //HomeWork 4. Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 // Console.WriteLine("Input number ");
