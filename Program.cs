@@ -27,7 +27,10 @@ void ShowArray(int[] array)
 
 Console.WriteLine();
 int[] myArray = CreateRandomArray(8,1,100);
-ShowArray(myArray);
+ShowArray(myArray); 
+Console.Write("-> [");
+ShowArray(myArray); 
+Console.Write("]");
 
 
 //2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
