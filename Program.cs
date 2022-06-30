@@ -1,14 +1,154 @@
-﻿//HomeWork 4.
+﻿
+//HomeWork 5.
+//1. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, 
+//которая покажет количество чётных чисел в массиве.
 
-//3.Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//         Console.Write(array[i]+ " ");
+//     Console.WriteLine();
+// }
+
+
+// void CountEven(int [] array)
+// {
+//     int result =0;
+//     int lenght = array.Length;
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         int x = array[i];
+//         if ((x%2)==0) {
+//             result=result +1;
+//         }
+//     }
+//     Console.WriteLine(result);
+// }
+
+// Console.WriteLine("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// // Console.WriteLine("Input start: ");
+// // int start = Convert.ToInt32(Console.ReadLine());
+// // Console.WriteLine("Input end: ");
+// // int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateRandomArray(size); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray);
+// CountEven(NewArray);
+
+
+//2. Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 int[] CreateRandomArray(int size, int min, int max)
 {
-    int[] array  = new int [size];
-    for(int i=0; i<size;i++){
-        array [i]=new Random().Next(min,max+1);
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
     }
     return array;
 }
+
+void ShowArray(int[] array)
+{
+    for (int i=0; i<array.Length; i++)
+    Console.Write(array[i]+ " ");
+}
+
+// void SumEven(int[] array)
+// {
+//     int resultA = 0;
+//     int lenght = array.Length;
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         if (i%2 != 0)
+//         {
+//             resultA =  resultA + array[i];
+//         }
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях {resultA}");
+// }
+
+Console.WriteLine("Input size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input start: ");
+int start = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input end: ");
+int end = Convert.ToInt32(Console.ReadLine());
+int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
+ShowArray(NewArray);
+// SumEven(NewArray);
+
+
+// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+ void Exstrem(int[] array){
+    int maxValue = NewArray.Max();
+    int minValue = NewArray.Min();
+    int result = NewArray.Max() - NewArray.Min();
+    Console.WriteLine();
+    Console.WriteLine($"Min: {maxValue}");
+    Console.WriteLine($"Max: {minValue}");
+    Console.WriteLine($"Разница: {result}");
+ }
+
+Exstrem(NewArray);
+
+
+//Seminar 5.
+//1.
+//Функция, на задание массива (создали методы)
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// //Выводим результат метода, который суммирует положительные/отрицательные числа массива
+// void SumResult(int[] array)
+// {
+//     int resultA = 0;
+//     int resultB = 0;
+//     for (int i = 0; i < 12; i++)
+//     {
+//         if (array[i] < 0)
+//         {
+//             resultA += array[i];
+//         }
+//         else
+//         {
+//             resultB += array[i];
+//         }
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"Сумма отрицательных чисел {resultA}");
+//     Console.WriteLine($"Сумма положительных чисел {resultB}");
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//     Console.Write(array[i]+ " ");
+// }
+
+// //Создаем массива
+// int [] MyArray  = CreateRandomArray(12,-9,9);
+// ShowArray(MyArray);
+// SumResult(MyArray);
+
 // int [] CreateArray(int size)
 // {
 //     int[] array  = new int [size];
@@ -19,18 +159,100 @@ int[] CreateRandomArray(int size, int min, int max)
 //     return array;
 // }
 
-void ShowArray(int[] array)
-{
-    for (int i=0; i<array.Length; i++)
-    Console.Write(array[i]+ " ");
-}
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//         Console.Write(array[i]+ " ");
+//     Console.WriteLine();
+// }
 
-Console.WriteLine();
-int[] myArray = CreateRandomArray(8,1,100);
-ShowArray(myArray); 
-Console.Write("-> [");
-ShowArray(myArray); 
-Console.Write("]");
+// Console.WriteLine();
+// int[] myArray = CreateRandomArray(12,-9,9);
+// ShowArray(myArray); 
+
+//2. Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.[-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+// Console.WriteLine("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input start: ");
+// int start = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input end: ");
+// int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray); 
+
+// for (int i = 0; i < size; i++)
+// {
+//     NewArray[i] *= -1;
+// }
+// ShowArray(NewArray); 
+
+
+//3.Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+//[1 2 3 4 5] -> 5 8 3
+//[6 7 3 6] -> 36 21
+
+// void MultMassive(int [] array)
+// {
+//     int result =1;
+//     int lenght = array.Length / 2;
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         result = array[i] * array[array.Length-1-i];
+//         Console.WriteLine(result);
+//     }
+
+// }
+
+// Console.WriteLine("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input start: ");
+// int start = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input end: ");
+// int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray); 
+// MultMassive(NewArray); 
+
+
+
+
+
+
+
+
+//HomeWork 4.
+
+//3.Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array  = new int [size];
+//     for(int i=0; i<size;i++){
+//         array [i]=new Random().Next(min,max+1);
+//     }
+//     return array;
+// int [] CreateArray(int size)
+// {
+//     int[] array  = new int [size];
+//     for(int i=0; i<size;i++){
+//         Console.Write("Input " + i + " element: ");
+//         array [i]=Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//     Console.Write(array[i]+ " ");
+// }
+
+// Console.WriteLine();
+// int[] myArray = CreateRandomArray(8,1,100);
+// ShowArray(myArray); 
+// Console.Write("-> [");
+// ShowArray(myArray); 
+// Console.Write("]");
 
 
 //2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
