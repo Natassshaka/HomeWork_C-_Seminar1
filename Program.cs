@@ -47,21 +47,21 @@
 
 
 //2. Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-int[] CreateRandomArray(int size, int min, int max)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(min, max + 1);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] arrayA = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arrayA[i] = new Random().Next(min, max + 1);
+//     }
+//     return arrayA;
+// }
 
-void ShowArray(int[] array)
-{
-    for (int i=0; i<array.Length; i++)
-    Console.Write(array[i]+ " ");
-}
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//     Console.Write(array[i]+ " ");
+// }
 
 // void SumEven(int[] array)
 // {
@@ -78,30 +78,30 @@ void ShowArray(int[] array)
 //     Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях {resultA}");
 // }
 
-Console.WriteLine("Input size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input start: ");
-int start = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input end: ");
-int end = Convert.ToInt32(Console.ReadLine());
-int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
-ShowArray(NewArray);
+// Console.WriteLine("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input start: ");
+// int start = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input end: ");
+// int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray);
 // SumEven(NewArray);
 
 
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
- void Exstrem(int[] array){
-    int maxValue = NewArray.Max();
-    int minValue = NewArray.Min();
-    int result = NewArray.Max() - NewArray.Min();
-    Console.WriteLine();
-    Console.WriteLine($"Min: {maxValue}");
-    Console.WriteLine($"Max: {minValue}");
-    Console.WriteLine($"Разница: {result}");
- }
+//  void Exstrem(int[] array){
+//     int maxValue = NewArray.Max();
+//     int minValue = NewArray.Min();
+//     int result = NewArray.Max() - NewArray.Min();
+//     Console.WriteLine();
+//     Console.WriteLine($"Min: {maxValue}");
+//     Console.WriteLine($"Max: {minValue}");
+//     Console.WriteLine($"Разница: {result}");
+//  }
 
-Exstrem(NewArray);
+// Exstrem(NewArray);
 
 
 //Seminar 5.
@@ -752,6 +752,136 @@ Console.WriteLine("Result is "+ result);
 // }
 
 
+//Seminar 6.
+
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] arrayA = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arrayA[i] = new Random().Next(min, max + 1);
+//     }
+//     return arrayA;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//     Console.Write(array[i]+ " ");
+// }
 
 
+// Console.WriteLine("Input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input start: ");
+// int start = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input end: ");
+// int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateRandomArray(size, start, end); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray);
+// Console.WriteLine();
+// int[] ReversArray = new int[size];
+//      for(int i=0, j=size-1; i<size; i++, j--){
+//       ReversArray[i]=NewArray[j];
+// }
+// ShowArray(ReversArray);
 
+// 2. Возможен ли треугольник
+// bool VarficationTriangl (int A, int B, int C){
+//     if (A<B+C && B<A+C && C<A+B){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// Console.WriteLine("Input 1: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input 2: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input 3: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+// if (VarficationTriangl(a,b,c))
+// {
+//     Console.WriteLine("Треугольник с тами сторонами существует");
+// }
+// else{
+//     Console.WriteLine("Треугольник с тами сторонами НЕ существует");
+// }
+
+//HomeWork 6. 
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// int [] CreateArray(int size)
+// {
+//     int[] array  = new int [size];
+//     Console.WriteLine("Укажите числа через Enter: ");
+//     for(int i=0; i<size;i++){
+//         // Console.Write("Укажите числа через Enter: ");
+//         array [i]=Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i=0; i<array.Length; i++)
+//         Console.Write(array[i]+ " ");
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Укажите кол-во чисел: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// // Console.WriteLine("Input start: ");
+// // int start = Convert.ToInt32(Console.ReadLine());
+// // Console.WriteLine("Input end: ");
+// // int end = Convert.ToInt32(Console.ReadLine());
+// int[] NewArray = CreateArray(size); // создадли массив, который генерурует метод из рандомных чисел
+// ShowArray(NewArray);
+
+// void ShowCount(int[] array)
+// {
+//     int count = 0;
+//     for (int i=0; i<array.Length; i++){ 
+//         if (array[i]>0){
+//             count ++;
+//         }
+//     }
+// Console.Write("Кол-во положительных элементов {count}");
+// }
+
+// ShowCount(NewArray);
+
+// void CountPlus(int [] array)
+// {
+//     int count =0;
+//     int lenght = array.Length;
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         int x = array[i];
+//         if (x>0) {
+//             count=count +1;
+//         }
+//     }
+//     Console.WriteLine("Кол-во положительных элементов: " + count);
+// }
+// CountPlus(NewArray);
+
+//Второй вариант решения, честно подсмотренный в Internet
+// Console.Write("Введите элементы(через пробел): ");
+// int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+// int count = 0;
+ 
+// for (int i = 0; i < arr.Length; i++)
+// {
+//     if (arr[i] > 0)
+//     {
+//         count++;
+//     }
+// }
+ 
+// Console.WriteLine($"Кол-во элементов > 0: {count}");
+//Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+Console.Write("Введите число ");
+int value = Convert.ToInt32(Console.ReadLine());;
+string binary = Convert.ToString(value, 2);
+Console.WriteLine(binary);
