@@ -870,7 +870,7 @@ Console.WriteLine("Result is "+ result);
 // Console.Write("Введите элементы(через пробел): ");
 // int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 // int count = 0;
- 
+
 // for (int i = 0; i < arr.Length; i++)
 // {
 //     if (arr[i] > 0)
@@ -878,10 +878,326 @@ Console.WriteLine("Result is "+ result);
 //         count++;
 //     }
 // }
- 
+
 // Console.WriteLine($"Кол-во элементов > 0: {count}");
 //Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-Console.Write("Введите число ");
-int value = Convert.ToInt32(Console.ReadLine());;
-string binary = Convert.ToString(value, 2);
-Console.WriteLine(binary);
+// Console.Write("Введите число ");
+// int value c Convert.ToInt32(Console.ReadLine());;
+// string binary = Convert.ToString(value, 2);
+// Console.WriteLine(binary);
+
+
+
+// 1
+
+// int[,] GetRandomArray(int m, int n, int min, int max)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i,j] = new Random().Next(min, max +1);
+// }
+// }
+// return result;
+// }
+
+
+// void PrintRandomArray(int[,] Arr)
+// {
+// for (int i = 0; i < Arr.GetLength(0); i++)
+// {
+// for (int j = 0; j < Arr.GetLength(1); j++)
+// {
+// Console.Write($"{Arr[i,j]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Clear();
+// Console.Write("Введите количество строк: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальный диапозон значения: ");
+// int Min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальный диапозон значения: ");
+// int Max = Convert.ToInt32(Console.ReadLine());
+// int [,] myArray = GetRandomArray(M, N, Min, Max);
+// PrintRandomArray(myArray);
+
+//2
+
+// int[,] GetArray(int m, int n)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = i + j;
+//         }
+//     }
+//     return result;
+// }
+// int[,] GetArray(int m, int n)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = i + j;
+//         }
+//     }
+//     return result;
+// }
+
+// void PrintArray(int[,] Arr)
+// {
+// for (int i = 0; i < Arr.GetLength(0); i++)
+// {
+// for (int j = 0; j < Arr.GetLength(1); j++)
+// {
+// Console.Write($"{Arr[i,j]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+// void PrintArray(int[,] Arr)
+// {
+// for (int i = 0; i < Arr.GetLength(0); i++)
+// {
+// for (int j = 0; j < Arr.GetLength(1); j++)
+// {
+// Console.Write($"{Arr[i,j]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Clear();
+// Console.Write("Введите количество строк: ");
+// int Row = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int Column = Convert.ToInt32(Console.ReadLine());
+// int [,] myNewArray = GetArray(Row, Column);
+// PrintArray(myNewArray);
+
+
+//3. 
+// int[,] GetRandomArray(int m, int n, int min, int max)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i,j] = new Random().Next(min, max +1);
+// }
+// }
+// return result;
+// }
+
+
+// void PrintRandomArray(int[,] Arr)
+// {
+// for (int i = 0; i < Arr.GetLength(0); i++)
+// {
+// for (int j = 0; j < Arr.GetLength(1); j++)
+// {
+// Console.Write($"{Arr[i,j]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+
+// int[,] ChangeArray (int[,] Arr)
+// {
+//     for (int i = 2; i < Arr.GetLength(0); i++)
+//     {
+//         for (int j = 2; j < Arr.GetLength(1); j++)
+//         {
+//             if (i % 2 == 0 && j % 2 == 0)
+//             {
+//                 Arr[i,j]= Arr[i,j]*Arr[i,j];
+//             }
+//         }
+
+//     }
+//     return Arr;
+// }
+
+// Console.Clear();
+// Console.Write("Введите кол-во строк: ");
+// int M  = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите кол-во столбцов: ");
+// int N  = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное значение: ");
+// int Min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальное значение: ");
+// int Max= Convert.ToInt32(Console.ReadLine());
+// int[,] myArray = GetRandomArray (M, N, Min, Max);
+// PrintRandomArray(myArray);
+// Console.WriteLine();
+// int[,] SqArray = ChangeArray (myArray);
+// PrintRandomArray(SqArray);
+
+//Домшнее задание. Семинар 7
+// 1. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+// double[,] GetRandomDoubleArray(int m, int n, int min, int max)
+// {
+//     double[,]result = new double[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = new Random().NextDouble() * (max-min); // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
+//             //Console.Write("{0,6:F2}", a[i, j]);
+//         }
+//     }
+//     return result;
+// }
+
+// void PrintRandomArray(double[,] Arr)
+// {
+//     for (int i = 0; i < Arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < Arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{Arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// Console.Clear();
+// Console.Write("Введите количество строк: ");
+// int M = int.Parse(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int N = int.Parse(Console.ReadLine());
+// double[,] myArray = GetRandomDoubleArray(M, N, 0, 10);
+// PrintRandomArray(myArray);
+
+//2  Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// int[,] GetRandomArray(int m, int n, int min, int max)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i,j] = new Random().Next(min, max +1);
+// }
+// }
+// return result;
+// }
+
+
+// void PrintRandomArray(int[,] Arr)
+// {
+// for (int i = 0; i < Arr.GetLength(0); i++)
+// {
+// for (int j = 0; j < Arr.GetLength(1); j++)
+// {
+// Console.Write($"{Arr[i,j]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// bool FindElement(int[,] array, int e){
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i,j]==e) return true;
+//         }
+//     }
+//     return false;
+// }
+
+// Console.Clear();
+// Console.Write("Введите количество строк: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальный диапозон значения: ");
+// int Min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальный диапозон значения: ");
+// int Max = Convert.ToInt32(Console.ReadLine());
+// int [,] myArray = GetRandomArray(M, N, Min, Max);
+// PrintRandomArray(myArray);
+// Console.Write("Введите значение элемента: ");
+// int element =  int.Parse(Console.ReadLine());
+// if(FindElement(myArray,element))
+// {
+//     Console.WriteLine("Элемент найден");
+// }
+// else
+// {
+//     Console.WriteLine("Элемент не найден");
+// }
+
+
+// 3 Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+int[,] GetRandomArray(int m, int n, int min, int max)
+{
+int[,] result = new int[m, n];
+for (int i = 0; i < m; i++)
+{
+for (int j = 0; j < n; j++)
+{
+result[i,j] = new Random().Next(min, max +1);
+}
+}
+return result;
+}
+
+
+void PrintRandomArray(int[,] Arr)
+{
+    for (int i = 0; i < Arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < Arr.GetLength(1); j++)
+        {
+            Console.Write($"{Arr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+double [] GetResultArray (int[,] array)
+{
+    double[] result = new double [array.GetLength(1)];
+    for (int i = 0; i< array.GetLength(1); i++)
+    {
+        double sum = 0;
+        for (int j = 0; j<array.GetLength(0);j++)
+        {
+        sum += array[j,i];
+        }
+        result[i]= Math.Round(sum/array.GetLength(0),2);
+    }
+    return result;
+}
+
+Console.Clear();
+Console.Write("Введите количество строк: ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальный диапозон значения: ");
+int Min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальный диапозон значения: ");
+int Max = Convert.ToInt32(Console.ReadLine());
+int [,] myArray = GetRandomArray(M, N, Min, Max);
+PrintRandomArray(myArray);
+double[] averageColumns = GetResultArray(myArray);
+Console.WriteLine($"Среднее арифметическое каждого столбца = {String.Join("; ",averageColumns)}");
+
+/////////////////////////////////////////////////
+//Семинар 8
